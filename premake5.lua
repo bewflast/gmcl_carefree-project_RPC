@@ -25,6 +25,6 @@ CreateWorkspace({name = "carefree_project_rpc"})
 		includedirs("discord-rpc/include")
 
 		filter({"platforms:x86_64"})
-			libdirs({"ds_build32/src/Release"})
-		filter({"platforms:x86"})
 			libdirs({"ds_build64/src/Release"})
+		filter({"platforms:x86"})
+			libdirs({"ds_build32/src/Release"})
