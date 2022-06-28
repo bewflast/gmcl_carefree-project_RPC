@@ -1,4 +1,6 @@
-drpc_build
+ds32_build
 .vscode
 premake5.exe
 projects
+ds64_build
+ds_build
