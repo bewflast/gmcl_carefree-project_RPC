@@ -11,15 +11,16 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     
+    - name: DiscordRPC-Submodule
+      run: git submodule update --init
+      
+    - uses: actions/checkout@v3
       with:
         submodules: recursive
         repository: danielga/garrysmod_common
         ref: x86-64-support-sourcesdk
         path: 'garrysmod_common'
-    
-    - name: DiscordRPC-Submodule
-      run: git submodule update --init
-      
+     
     - name: Install Premake
       run: |
          curl -L https://github.com/premake/premake-core/releases/download/v5.0.0-beta1/premake-5.0.0-beta1-windows.zip -o premake.zip
