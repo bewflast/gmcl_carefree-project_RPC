@@ -28,8 +28,8 @@ jobs:
          
     - name: Build DRPC
       run: |
-          cmake ..\discord-rpc\ -A Win32 -DUSE_STATIC_CRT=ON -B "ds_build32"
-          cmake ..\discord-rpc\  -DUSE_STATIC_CRT=ON -B "ds_build64"
+          cmake discord-rpc\ -A Win32 -DUSE_STATIC_CRT=ON -B "ds_build32"
+          cmake discord-rpc\  -DUSE_STATIC_CRT=ON -B "ds_build64"
           cmake --build ds_build32 --config Release
           cmake --build ds_build64 --config Release
           
