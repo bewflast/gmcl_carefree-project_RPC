@@ -43,7 +43,7 @@ jobs:
     
     - uses: actions/upload-artifact@v3
       with:
-        name: gmsv_eightbit_windows.dll
+        name: gmcl_carefree_project_rpc_win32.dll
         path: projects/windows/vs2019/x86/Release/gmcl_carefree_project_rpc_win32.dll
     
     - name: Build 64
@@ -53,5 +53,5 @@ jobs:
     
     - uses: actions/upload-artifact@v3
       with:
-        name: gmsv_eightbit_win64.dll
+        name: gmcl_carefree_project_rpc_win64.dll
         path: projects/windows/vs2019/x86_64/Release/gmcl_carefree_project_rpc_win64.dll
