@@ -10,7 +10,7 @@ local gmcommon = assert(_OPTIONS.gmcommon or os.getenv("GARRYSMOD_COMMON"),
 	"you didn't provide a path to your garrysmod_common (https://github.com/danielga/garrysmod_common) directory")
 include(gmcommon)
 
-CreateWorkspace({name = "carefree_project_rpc"})
+CreateWorkspace({name = "carefree_project_rpc", abi_compatible = true})
 	CreateProject({serverside = false})
 		IncludeLuaShared()
 		IncludeHelpersExtended()
