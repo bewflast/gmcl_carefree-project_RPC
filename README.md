@@ -2,8 +2,15 @@
 Discord RPC для игроков моего сервера
 
 ### Где взять сами модули?
+A)
 1) Перейти в самый последний [workflow run](https://github.com/bewflast/gmcl_carefree-project_RPC/actions) (самый верхний)
 2) Промотать в самый низ и скачать модуль для нужной версии игры (если ты не уверен, то можешь качать обе и без проблем закидывать в папку, о которой далее пойдет речь)
+
+
+Б)
+1) Если файлы выше некликабельны, то [перейти по этой ссылке](https://github.com/bewflast/gmcl_carefree-project_RPC/releases/tag/latest)
+2) Скачать модуль/модули
+
 
 ### Куда мне деть эти модули?
 1) Перейди в папку твоего Garry's Mod'a (напр. `D:\SteamLibrary\steamapps\common\GarrysMod\garrysmod`)
