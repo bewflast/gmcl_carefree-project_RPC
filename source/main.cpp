@@ -1,6 +1,7 @@
 #include <GarrysMod/InterfacePointers.hpp>
 #include <GarrysMod/Lua/Interface.h>
 #include <GarrysMod/FactoryLoader.hpp>
+#include <convar.h>
 
 #include <cdll_int.h>
 #include <inetchannelinfo.h>
@@ -15,6 +16,7 @@ namespace globals
 	static IVEngineClient*				engine_client	=	nullptr;
 	static server*						s_info			=	nullptr;
 	static DRPC*						discord			=	nullptr;
+	static ConVar*						host_name		=	nullptr;
 
 }
 
@@ -51,7 +53,8 @@ GMOD_MODULE_OPEN()
 
 	globals::Lua			=	LUA;
 	globals::engine_client	=	InterfacePointers::VEngineClient();
-	globals::s_info			=	new server(globals::engine_client->GetMaxClients(), "🤪Бeззaбoтнocть и Beceльe!🤪", globals::engine_client->GetNetChannelInfo()->GetAddress(), GetPlayersCount());
+	globals::host_name		=	InterfacePointers::Cvar()->FindVar("hostname");
+	globals::s_info			=	new server(globals::engine_client->GetMaxClients(), globals::host_name->GetString(), globals::engine_client->GetNetChannelInfo()->GetAddress(), GetPlayersCount());
 	globals::discord		=	new DRPC("990599027735281764", globals::s_info);
 	
 	globals::discord->update();
